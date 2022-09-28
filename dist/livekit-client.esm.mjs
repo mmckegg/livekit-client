@@ -19984,7 +19984,6 @@ class LocalParticipant extends Participant {
       encodings = computeVideoEncodings(track.source === Track.Source.ScreenShare, width, height, opts);
       req.layers = videoLayersFromEncodings(req.width, req.height, simEncodings !== null && simEncodings !== void 0 ? simEncodings : encodings);
     } else if (track instanceof LocalAudioTrack && opts.audioBitrate) {
-      console.log('AUDIO ENCODING', opts.audioBitrate);
       encodings = [{
         maxBitrate: opts.audioBitrate
       }];
